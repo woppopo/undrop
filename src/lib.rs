@@ -3,6 +3,7 @@
 use core::ops::{Deref, DerefMut};
 
 #[repr(transparent)]
+#[derive(PartialEq, Eq, PartialOrd, Ord, Clone, Hash, Default, Debug)]
 pub struct Undroppable<T>(T);
 
 impl<T> Undroppable<T> {
