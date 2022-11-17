@@ -24,7 +24,7 @@ impl<T> Undroppable<T> {
     }
 
     pub unsafe fn take(this: &mut Self) -> T {
-        unsafe { core::ptr::read(&this.0) }
+        core::ptr::read(&this.0)
     }
 }
 
